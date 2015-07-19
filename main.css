@@ -35,14 +35,16 @@ header {
   color: #66695d;
   border-bottom: 4px solid #bcbbbb; }
   header h1 {
-    width: 100px;
-    height: 100px;
-    float: left;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background: url(images/udacity_logo.svg) 0 0 no-repeat;
-    background-size: 100% auto; }
+    float: left; }
+    header h1 a {
+      display: block;
+      width: 100px;
+      height: 100px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background: url(images/udacity_logo.svg) 0 0 no-repeat;
+      background-size: 100% auto; }
   header h2 {
     line-height: 1;
     font-size: 60px;
