@@ -1,0 +1,141 @@
+// Vars
+
+$orange: #f8981c;
+$grey: #bcbbbb;
+$green: #747704;
+$text: #66695d;
+
+$gutter: 24px;
+
+// Reset (I would use a full reset file on a production website)
+
+html {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: $grey;
+    text-decoration: none;
+    transition: color .5s;
+    &:hover {
+        color: $text;
+    }
+}
+
+// Layout
+
+.wrap {
+    max-width: 978px;
+    margin: 0 auto;
+    padding: 0 $gutter;
+}
+
+header {
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: right;
+    text-transform: uppercase;
+    color: $text;
+    border-bottom: 4px solid $grey;
+    h1 {
+        width: 100px;
+        height: 100px;
+        float: left;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: url(_img/udacity_logo.svg) 0 0 no-repeat;
+        background-size: 100% auto;
+    }
+    h2 {
+        line-height: 1;
+        font-size: 60px;
+        font-weight: 300;
+        letter-spacing: .025em;
+    }
+    h3 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+section {
+    padding: 30px 0;
+    h1 {
+        margin: 30px 0 10px;
+        font-size: 30px;
+        font-weight: 400;
+        color: $grey;
+    }
+}
+
+.featured-work {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% + #{$gutter});
+    margin-left: -$gutter/2;
+    li {
+        margin-bottom: 20px;
+        padding: 0 $gutter/2;
+        flex-grow: 1;
+        text-align: center;
+        a {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    img {
+        margin-bottom: 10px;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: .05em;
+        color: $green;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    section {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .featured-work {
+        flex-direction: row;
+        li {
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .featured-work {
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
