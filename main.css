@@ -41,7 +41,7 @@ header {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background: url(_img/udacity_logo.svg) 0 0 no-repeat;
+    background: url(/_img/udacity_logo.svg) 0 0 no-repeat;
     background-size: 100% auto; }
   header h2 {
     line-height: 1;
